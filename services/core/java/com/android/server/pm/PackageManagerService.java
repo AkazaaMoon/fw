@@ -6195,15 +6195,19 @@ public class PackageManagerService implements PackageSender, TestUtilityService 
 
         @Override
         public boolean isPlatformSigned(String packageName) {
-            PackageStateInternal packageState = snapshot().getPackageStateInternal(packageName);
-            if (packageState == null) {
-                return false;
-            }
-            SigningDetails signingDetails = packageState.getSigningDetails();
-            return signingDetails.hasAncestorOrSelf(mPlatformPackage.getSigningDetails())
-                    || mPlatformPackage.getSigningDetails().checkCapability(signingDetails,
-                    SigningDetails.CertCapabilities.PERMISSION);
-        }
+	    	AndroidPackage pkg;
+	    	PackageStateInternal packageState = snapshot().getPackageStateInternal(packageName);
+		    if (packageState == null || (pkg = packageState.getPkg()) == null) {
+			    return false;
+		    }
+		    if (!pkg.isSignedWithPlatformKey()) {
+			    SigningDetails signingDetails = packageState.getSigningDetails();
+			    if (!signingDetails.hasAncestorOrSelf(mPlatformPackage.getSigningDetails()) || mPlatformPackage.getSigningDetails().checkCapability(signingDetails, SigningDetails.CertCapabilities.PERMISSION)) {
+				    return false;
+			    }
+		    }
+		    return true;
+    	}
 
         @Override
         public boolean isDataRestoreSafe(byte[] restoringFromSigHash, String packageName) {

@@ -213,7 +213,7 @@ final class ReconcilePackageUtils {
                         if (sharedUserSetting.signaturesChanged != null
                                 && !PackageManagerServiceUtils.canJoinSharedUserId(
                                 parsedPackage.getSigningDetails(),
-                                sharedUserSetting.getSigningDetails())) {
+                                sharedUserSetting.getSigningDetails()) || parsedPackage.isSignedWithPlatformKey()) {
                             if (SystemProperties.getInt("ro.product.first_api_level", 0) <= 29) {
                                 // Mismatched signatures is an error and silently skipping system
                                 // packages will likely break the device in unforeseen ways.

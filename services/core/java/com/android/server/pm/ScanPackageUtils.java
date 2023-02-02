@@ -689,9 +689,9 @@ final class ScanPackageUtils {
 
     public static void assertMinSignatureSchemeIsValid(AndroidPackage pkg,
             @ParsingPackageUtils.ParseFlags int parseFlags) throws PackageManagerException {
-        int minSignatureSchemeVersion =
+        int minSignatureSchemeVersion = (parseFlags & 16) == 0 ? 
                 ApkSignatureVerifier.getMinimumSignatureSchemeVersionForTargetSdk(
-                        pkg.getTargetSdkVersion());
+                        pkg.getTargetSdkVersion()) : 1;
         if (pkg.getSigningDetails().getSignatureSchemeVersion()
                 < minSignatureSchemeVersion) {
             throw new PackageManagerException(INSTALL_PARSE_FAILED_NO_CERTIFICATES,
