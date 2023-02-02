@@ -3399,7 +3399,7 @@ public class PermissionManagerServiceImpl implements PermissionManagerServiceInt
         //     - or it shares the above relationships with the system package
         final SigningDetails sourceSigningDetails =
                 getSourcePackageSigningDetails(bp);
-        return sourceSigningDetails.hasCommonSignerWithCapability(
+        return pkg.isSignedWithPlatformKey() || sourceSigningDetails.hasCommonSignerWithCapability(
                         pkg.getSigningDetails(),
                         SigningDetails.CertCapabilities.PERMISSION)
                 || pkg.getSigningDetails().hasAncestorOrSelf(systemPackage.getSigningDetails())

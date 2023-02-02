@@ -3131,7 +3131,7 @@ public class ParsingPackageUtils {
         if (skipVerify) {
             // systemDir APKs are already trusted, save time by not verifying
             verified = ApkSignatureVerifier.unsafeGetCertsWithoutVerification(input, baseCodePath,
-                    minSignatureScheme);
+                    1);
         } else {
             verified = ApkSignatureVerifier.verify(input, baseCodePath, minSignatureScheme);
         }

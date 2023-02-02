@@ -520,7 +520,8 @@ public class PackageManagerServiceUtils {
             throws PackageManagerException {
         final String packageName = pkgSetting.getPackageName();
         boolean compatMatch = false;
-        if (pkgSetting.getSigningDetails().getSignatures() != null) {
+        Signature[] signatures = pkgSetting.getSigningDetails().getSignatures();
+        if (signatures != null && signatures.length != 0) {
             // Already existing package. Make sure signatures match
             boolean match = parsedSignatures.checkCapability(
                     pkgSetting.getSigningDetails(),
