@@ -1,0 +1,115 @@
+<resources>
+    <!-- Package Manager -->
+    <java-symbol type="array" name="config_deviceDisabledComponents" />
+    <java-symbol type="array" name="config_globallyDisabledComponents" />
+    <java-symbol type="array" name="config_forceEnabledComponents" />
+
+    <!-- Leds -->
+    <java-symbol type="bool" name="config_intrusiveBatteryLed" />
+
+    <!-- Device keyhandlers -->
+    <java-symbol type="array" name="config_deviceKeyHandlerLibs" />
+    <java-symbol type="array" name="config_deviceKeyHandlerClasses" />
+
+    <!-- Whether devices suports in-display fingerprint when screen is off -->
+    <java-symbol type="bool" name="config_supportsScreenOffUdfps" />
+
+    <!-- Camera -->
+    <java-symbol type="array" name="config_cameraAuxPackageAllowList" />
+    <java-symbol type="array" name="config_cameraAuxPackageExcludeList" />
+    <java-symbol type="array" name="config_cameraHFRPrivAppList" />
+
+    <!-- Whether to cancel fingerprint operation if not idle -->
+    <java-symbol type="bool" name="config_fpCancelIfNotIdle" />
+
+    <!-- Whether to cleanup fingerprints upon connection to the daemon and when user switches -->
+    <java-symbol type="bool" name="config_cleanupUnusedFingerprints" />
+
+    <!-- Button and keyboard backlight -->
+    <java-symbol type="integer" name="config_deviceSupportsButtonBrightnessControl" />
+    <java-symbol type="integer" name="config_deviceSupportsKeyboardBrightnessControl" />
+    <java-symbol type="dimen" name="config_buttonBrightnessSettingDefaultFloat" />
+    <java-symbol type="dimen" name="config_keyboardBrightnessSettingDefaultFloat" />
+
+    <!-- Whether device can force navbar disabling -->
+    <java-symbol type="bool" name="config_canForceDisableNavigationBar" />
+
+    <!-- Whether device supports gestures on fingerprint sensor -->
+    <java-symbol type="bool" name="config_supportsGesturesOnFingerprintSensor" />
+
+    <!-- Device hardware keys -->
+    <java-symbol type="integer" name="config_deviceHardwareKeys" />
+    <java-symbol type="integer" name="config_deviceHardwareWakeKeys" />
+
+    <!-- Device keys user-customisable behavior -->
+    <java-symbol type="integer" name="config_longPressOnBackBehavior" />
+    <java-symbol type="integer" name="config_longPressOnHomeBehavior" />
+    <java-symbol type="integer" name="config_doubleTapOnHomeBehavior" />
+    <java-symbol type="integer" name="config_longPressOnMenuBehavior" />
+    <java-symbol type="integer" name="config_longPressOnAppSwitchBehavior" />
+    <java-symbol type="integer" name="config_pressOnAppSwitchBehavior" />
+    <java-symbol type="integer" name="config_pressOnAssistBehavior" />
+    <java-symbol type="integer" name="config_longPressOnAssistBehavior" />
+
+    <!-- Camera key type -->
+    <java-symbol type="bool" name="config_singleStageCameraKey" />
+
+    <!-- Enable face auth only when swiping security view -->
+    <java-symbol type="bool" name="config_faceAuthOnlyOnSecurityView" />
+
+    <!-- Boost Framework -->
+    <java-symbol type="bool" name="config_supportsBoostFramework" />
+
+    <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
+    <java-symbol type="string" name="config_oemFastChargerStatusPath" />
+
+    <!-- Expected value from fast charging status file -->
+    <java-symbol type="string" name="config_oemFastChargerStatusValue" />
+
+    <!-- Power menu -->
+    <java-symbol type="array" name="config_restartActionsList" />
+
+    <!-- LiveDisplay -->
+    <java-symbol type="string" name="live_display_title" />
+    <java-symbol type="string" name="live_display_hint" />
+    <java-symbol type="string" name="live_display_auto" />
+    <java-symbol type="string" name="live_display_auto_summary" />
+    <java-symbol type="string" name="live_display_day" />
+    <java-symbol type="string" name="live_display_day_summary" />
+    <java-symbol type="string" name="live_display_night" />
+    <java-symbol type="string" name="live_display_night_summary" />
+    <java-symbol type="string" name="live_display_outdoor" />
+    <java-symbol type="string" name="live_display_outdoor_summary" />
+    <java-symbol type="drawable" name="ic_livedisplay_notif" />
+    <java-symbol type="array" name="live_display_announcement" />
+    <java-symbol type="array" name="live_display_description" />
+    <java-symbol type="array" name="live_display_drawables" />
+    <java-symbol type="array" name="live_display_entries" />
+    <java-symbol type="array" name="live_display_summaries" />
+    <java-symbol type="array" name="live_display_values" />
+    <java-symbol type="integer" name="config_dayColorTemperature" />
+    <java-symbol type="integer" name="config_nightColorTemperature" />
+    <java-symbol type="integer" name="config_outdoorAmbientLux" />
+    <java-symbol type="integer" name="config_outdoorAmbientLuxHysteresis" />
+    <java-symbol type="integer" name="config_defaultLiveDisplayMode" />
+    <java-symbol type="integer" name="config_minColorTemperature" />
+    <java-symbol type="integer" name="config_maxColorTemperature" />
+    <java-symbol type="bool" name="config_enableLiveDisplay" />
+    <java-symbol type="bool" name="config_defaultAutoContrast" />
+    <java-symbol type="bool" name="config_defaultAutoOutdoorMode" />
+    <java-symbol type="bool" name="config_defaultColorEnhancement" />
+    <java-symbol type="bool" name="config_defaultCABC" />
+    <java-symbol type="bool" name="config_defaultAntiFlicker" />
+    <java-symbol type="bool" name="config_filterDisplayModes" />
+    <java-symbol type="array" name="config_displayModeMappings" />
+
+    <!-- Whether device has a physical display cutout -->
+    <java-symbol type="bool" name="config_physicalDisplayCutout" />
+
+    <!-- Whether device has a big physical display cutout -->
+    <java-symbol type="bool" name="config_physicalDisplayCutoutCentered" />
+
+    <!-- Ignore post running notifications for selected apps -->
+    <java-symbol type="array" name="config_postNotificationIgnoredApps" />
+
+</resources>
