@@ -78,7 +78,7 @@ public class StatusBarIconHolder {
             TYPE_MOBILE_NEW,
             TYPE_WIFI_NEW,
             TYPE_BLUETOOTH,
-            TYPE_NETWORK_TRAFFIC
+            TYPE_NETWORK_TRAFFIC,
             TYPE_IMS
     })
     @Retention(RetentionPolicy.SOURCE)
